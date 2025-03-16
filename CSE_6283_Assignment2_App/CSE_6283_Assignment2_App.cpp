@@ -2,33 +2,34 @@
 //
 
 #include <iostream>
+#include <cstdio>
 
-float poundsToKg(float pounds)
+double poundsToKg(double pounds)
 {
     return pounds * 0.45;
 }
 
-float inchesToMeter(float inches)
+double inchesToMeter(double inches)
 {
     return inches * 0.025;
 }
 
-float BMI_calculation(float kg, float m)
+double BMI_calculation(double kg, double m)
 {
     return kg / (m * m);
 }
 
-void BMI_category(float BMI)
+void BMI_category(double BMI)
 {
     if (BMI < 18.5)
     {
         std::cout << "Underweight" << std::endl;
     }
-    else if (BMI >= 18.5 and BMI < 25)
+    else if (BMI >= 18.5 && BMI < 25)
     {
         std::cout << "Normal weight" << std::endl;
     }
-    else if (BMI >= 25 and BMI < 30)
+    else if (BMI >= 25 && BMI < 30)
     {
         std::cout << "Overweight" << std::endl;
     }
@@ -44,12 +45,12 @@ void BMI_category(float BMI)
 
 int main()
 {
-    float weight_pounds;
-    float weight_kg;
-    float height_inches;
-    float height_m;
+    double weight_pounds;
+    double weight_kg;
+    double height_inches;
+    double height_m;
 
-    float BMI;
+    double BMI;
 
     std::cout << "This program will calculate your Body Mass Index (BMI) and give you a category\n";
     
@@ -68,16 +69,7 @@ int main()
     BMI_category(BMI);
 
     
+    system("pause");
+    
     
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
